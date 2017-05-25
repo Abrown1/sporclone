@@ -57,7 +57,7 @@ function start()
 
         // p.
 
-
+  timer = setInterval(tick, 1000);
         // q.
 
 
@@ -83,7 +83,10 @@ function tick()
     }
 
     // u.
-
+if (time_remaining > 1)
+ {
+   end();
+ }
 
 }
 
@@ -139,6 +142,7 @@ function check()
 /**
  * Shows all answers and highlights correct and incorrect answers different colors.
  */
+
 function end()
 {
     clearInterval(timer);
