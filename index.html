@@ -50,10 +50,10 @@ table span {
 /*********** Game configuration ***********/
 
 // c.
-var answers = ["freedom", "formation", "sorry", "6 inch", "hold up", "dont hurt yourself", "pray you catch me", "daddy lessons", "dlove drought", "sandcastles", "forward", "all night"];
+var answers = ["freedom", "formation", "sorry", "6 inch", "hold up", "dont hurt yourself", "pray you catch me", "daddy lessons", "love drought", "sandcastles", "forward", "all night"];
 
 // d.
-var time_limit = 180; // in seconds
+var time_limit = 100; // in seconds
 
 </script>
 
@@ -95,7 +95,8 @@ var time_limit = 180; // in seconds
 
         <div class="column">
             <!-- i. -->
-            <input type="button" onclick="start()" value="play game">
+
+            <input id="start" type="button" onclick="start()" value="play game">
         </div>
 
         <div class="column">
@@ -103,7 +104,7 @@ var time_limit = 180; // in seconds
             <h3>Enter song name:</h3>
 
             <!-- k.  -->
-            <input id="guess" type="text">
+            <input id="guess" type="text" onkeyup="check()">
         </div>
 
         <div class="column">

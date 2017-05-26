@@ -39,7 +39,7 @@ function setup()
     document.getElementById('score').innerHTML = correct + "/" + total;
 
     // o.
-    document.getElementById('time').innerHTML = time_remaining;
+    document.getElementById('time').innerHTML = formatTime(time_remaining);
 }
 
 
@@ -56,7 +56,7 @@ function start()
 
 
         // p.
-
+  time_remaining = 180
   timer = setInterval(tick, 1000);
         // q.
 
@@ -74,7 +74,7 @@ function start()
 function tick()
 {
     // s.
-    document.getElementById('time').innerHTML = time_remaining;
+    document.getElementById('time').innerHTML = formatTime(time_remaining);
 
     // t.
     if (time_remaining < 1)
@@ -83,10 +83,11 @@ function tick()
     }
 
     // u.
-if (time_remaining > 1)
- {
-   end();
- }
+   else if (time_remaining >=1)
+
+{
+    time_remaining = time_remaining - 1;
+}
 
 }
 
@@ -121,17 +122,17 @@ function check()
                         is_guessed[i] = true;
 
                         // v.
-
+                      correct++
 
                         // w.
 
-
+                document.getElementById('score').innerHTML = correct + "/" + total;
                     }
                 }
             }
         }
 
-        if (correct == answers.length)
+       if (correct == answers.length)
         {
             end();
         }
