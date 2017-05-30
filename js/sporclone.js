@@ -60,6 +60,7 @@ function start()
   timer = setInterval(tick, 1000);
         // q.
 
+  document.getElementById('time').style.color = "#009900";
 
         // r.
 
@@ -150,6 +151,8 @@ function end()
 
     // x.
 
+        document.getElementById('time').style.color = "#990000";
+
 
     for (var i=0; i<is_guessed.length; i++)
     {
@@ -162,6 +165,7 @@ function end()
 
         // y.
         if (is_guessed[i]==true)
+
         {
 
         }
