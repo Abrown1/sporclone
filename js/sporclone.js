@@ -17,7 +17,7 @@ var is_guessed;
 var timer;
 var time_remaining;
 var playing;
-
+var areEqual
 
 /**
  * Sets initial game state.
@@ -82,6 +82,7 @@ function tick()
     {
         end();
     }
+
 
     // u.
    else if (time_remaining >=1)
@@ -167,11 +168,11 @@ function end()
         if (is_guessed[i]==true)
 
         {
-
+          document.getElementById(id).style.color = "#1aff1a";
         }
         else
         {
-
+          document.getElementById(id).style.color = "#ff0000";
         }
 
     }
@@ -213,6 +214,7 @@ function isAlphanumericMatch(str1, str2)
     str2 = str2.replace(/[^a-zA-Z0-9]+/g, '');
 
     // z.
+
     if (str1 == str2)
     {
         return true;
